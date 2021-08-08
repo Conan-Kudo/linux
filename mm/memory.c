@@ -1300,6 +1300,7 @@ copy_page_range(struct vm_area_struct *dst_vma, struct vm_area_struct *src_vma)
 	}
 	return ret;
 }
+EXPORT_SYMBOL_GPL(zap_page_range);
 
 static unsigned long zap_pte_range(struct mmu_gather *tlb,
 				struct vm_area_struct *vma, pmd_t *pmd,
