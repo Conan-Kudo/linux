@@ -9,7 +9,7 @@ config ANDROID
 if ANDROID
 
 config ANDROID_BINDER_IPC
-	bool "Android Binder IPC Driver"
+	tristate "Android Binder IPC Driver"
 	depends on MMU
 	default n
 	help
@@ -19,6 +19,9 @@ config ANDROID_BINDER_IPC
 	  This means one Android process can call a method/routine in another
 	  Android process, using Binder to identify, invoke and pass arguments
 	  between said processes.
+
+	  To compile this driver as a module, choose M here. The
+	  module will be called binder.
 
 config ANDROID_BINDERFS
 	bool "Android Binderfs filesystem"
